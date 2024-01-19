@@ -1,0 +1,5 @@
+/default.db
+/logs/
+/sopel.pid
+__pycache__
+.mypy_cache
