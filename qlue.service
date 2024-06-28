@@ -1,0 +1,21 @@
+[Unit]
+Description=The qlue IRC bot
+After=network.target
+
+[Service]
+ExecStart=/home/qlue/.local/bin/sopel
+User=qlue
+Restart=on-failure
+PrivateTmp=true
+ProtectSystem=strict
+# TODO: move to /var/lib/qlue
+#ProtectHome=true
+PrivateDevices=true
+ProtectKernelTunables=true
+ProtectKernelModules=true
+ProtectControlGroups=true
+NoNewPrivileges=true
+ReadWritePaths=/home/qlue/qlue
+
+[Install]
+WantedBy=multi-user.target
